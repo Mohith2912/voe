@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration | Miracle 2026</title>
+    <meta name="description" content="Register your team for Miracle 2026 — the flagship hackathon by Voice of Easwarians.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+    <div class="global-bg"></div>
+    <div class="global-aurora">
+        <div class="aurora-blob aurora-blob-1"></div>
+        <div class="aurora-blob aurora-blob-2"></div>
+        <div class="aurora-blob aurora-blob-3"></div>
+    </div>
+    <div class="global-grid"></div>
+    <div class="global-noise"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-logo">
+                <span>VOE</span><span class="nav-logo-sep">/</span><span class="text-gradient">Miracle '26</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html"      class="nav-link">Home</a>
+                <a href="event-details.html" class="nav-link">Details</a>
+                <a href="about.html"         class="nav-link">About</a>
+                <a href="contact.html"       class="nav-link">Contact</a>
+                <a href="registration.html"  class="btn btn-primary" style="padding:0.5rem 1.2rem;font-size:0.9rem;">Register Now</a>
+            </div>
+            <button class="nav-mobile-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+    <div class="mobile-nav" id="mobileNav">
+        <button class="mobile-nav-close" id="mobileClose"><i class="fas fa-times"></i></button>
+        <a href="../index.html"      class="nav-link">Home</a>
+        <a href="event-details.html" class="nav-link">Details</a>
+        <a href="about.html"         class="nav-link">About</a>
+        <a href="contact.html"       class="nav-link">Contact</a>
+        <a href="registration.html"  class="btn btn-primary">Register Now</a>
+    </div>
+
+    <main>
+        <header class="page-header">
+            <div class="container reveal fade-up">
+                <h1 class="page-title split-text">Team <span class="text-gradient">Registration</span></h1>
+                <p class="page-subtitle">Reserve your spot at Miracle 2026. Spaces are strictly limited.</p>
+            </div>
+        </header>
+
+        <section class="page-content">
+            <div class="container reg-grid">
+
+                <!-- Eligibility -->
+                <div class="reveal fade-up">
+                    <h2 style="font-size:2rem;font-weight:800;margin-bottom:1.5rem;">
+                        Eligibility &amp; <span class="text-gradient">Rules</span>
+                    </h2>
+                    <ul class="eligibility-list">
+                        <li>Teams must consist of strictly 2 to 4 members.</li>
+                        <li>All members must be currently enrolled college students with valid IDs.</li>
+                        <li>Inter-college teams are permitted.</li>
+                        <li>By registering, you agree to the Miracle 2026 Code of Conduct.</li>
+                    </ul>
+
+                    <div class="glass-panel eligibility-note">
+                        <i class="fas fa-exclamation-circle text-gradient" style="font-size:1.5rem;margin-bottom:0.75rem;display:block;"></i>
+                        <h3>Important Note</h3>
+                        <p>Please ensure the Team Leader's email is active and monitored — all official communications will be sent there.</p>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="reveal fade-up delay-1">
+                    <div class="trust-strip">
+                        <div class="trust-badge"><i class="fas fa-check-circle"></i> Free Registration</div>
+                        <div class="trust-badge"><i class="fas fa-users"></i> 2–4 Members</div>
+                        <div class="trust-badge"><i class="fas fa-id-card"></i> College Students Only</div>
+                        <div class="trust-badge"><i class="fas fa-hourglass-half"></i> Limited Slots</div>
+                    </div>
+
+                    <div class="form-panel">
+                        <form id="registrationForm" novalidate>
+                            <div class="form-group">
+                                <label for="teamName">Team Name *</label>
+                                <input type="text" id="teamName" class="form-control" required placeholder="Team Nexus">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="leaderName">Team Leader Name *</label>
+                                <input type="text" id="leaderName" class="form-control" required placeholder="Alex Chen">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" class="form-control" required placeholder="alex@university.edu">
+                                </div>
+                                <div class="form-group">
+                                    <label for="teamSize">Team Size *</label>
+                                    <select id="teamSize" class="form-control" required>
+                                        <option value="" disabled selected>Select size</option>
+                                        <option value="2">2 Members</option>
+                                        <option value="3">3 Members</option>
+                                        <option value="4">4 Members</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="track">Preferred Track *</label>
+                                <select id="track" class="form-control" required>
+                                    <option value="" disabled selected>Select your primary track</option>
+                                    <option value="ai">AI &amp; Machine Learning</option>
+                                    <option value="web">Web / App Development</option>
+                                    <option value="health">Healthcare</option>
+                                    <option value="campus">Smart Campus</option>
+                                    <option value="social">Social Impact</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="college">College Name *</label>
+                                <input type="text" id="college" class="form-control" required placeholder="Easwari Engineering College">
+                            </div>
+
+                            <button type="submit" id="submitBtn" class="btn btn-primary submit-btn" style="width:100%;padding:1.1rem;">
+                                Complete Registration <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="container" style="text-align:center;">
+                <p class="footer-copy">&copy; 2026 Voice of Easwarians. Crafted by the VOE Tech Team.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="../assets/js/nav.js"></script>
+    <script src="../assets/js/animations.js"></script>
+    <script src="../assets/js/tabs.js"></script>
+    <script src="../assets/js/registration.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

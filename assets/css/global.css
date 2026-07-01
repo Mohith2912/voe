@@ -1,0 +1,121 @@
+/* =========================================
+   GLOBAL — Layout, Background System, Footer
+   ========================================= */
+
+/* ---- Container ---- */
+.container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ---- Section Utility ---- */
+.section-pad { padding: var(--section-padding) 0; }
+
+/* =========================================
+   LAYERED BACKGROUND SYSTEM
+   ========================================= */
+
+/* Layer 1: Base radial gradient */
+.global-bg {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 80% 60% at 10% 15%, rgba(67, 56, 202, 0.15) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 50% at 90% 85%, rgba(190, 24, 93, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse 50% 40% at 50% 50%, rgba(126, 34, 206, 0.08) 0%, transparent 60%),
+        var(--bg-base);
+    z-index: -3;
+    pointer-events: none;
+}
+
+/* Layer 2: Animated aurora blobs */
+.global-aurora {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    overflow: hidden;
+}
+.aurora-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.12;
+    animation: blobDrift linear infinite;
+}
+.aurora-blob-1 {
+    width: 600px; height: 400px;
+    top: -100px; left: -150px;
+    background: radial-gradient(ellipse, var(--accent-primary) 0%, transparent 70%);
+    animation-duration: 35s;
+}
+.aurora-blob-2 {
+    width: 500px; height: 350px;
+    top: 40%; right: -100px;
+    background: radial-gradient(ellipse, var(--accent-secondary) 0%, transparent 70%);
+    animation-duration: 45s;
+    animation-delay: -7s;
+    animation-direction: reverse;
+}
+.aurora-blob-3 {
+    width: 400px; height: 400px;
+    bottom: -100px; left: 40%;
+    background: radial-gradient(ellipse, var(--accent-tertiary) 0%, transparent 70%);
+    animation-duration: 55s;
+    animation-delay: -12s;
+}
+
+/* Layer 3: Dot grid texture */
+.global-grid {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 80%);
+}
+
+/* Layer 4: Noise grain overlay */
+.global-noise {
+    position: fixed;
+    inset: 0;
+    z-index: 9997;
+    pointer-events: none;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+    animation: noiseFlicker 8s linear infinite;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+.site-footer {
+    padding: 3rem 0;
+    border-top: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+.site-footer::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 60%; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-primary), var(--accent-secondary), transparent);
+    opacity: 0.6;
+}
+.footer-logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0.75rem;
+}
+.footer-copy {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miracle 2026 | Voice of Easwarians Hackathon</title>
+    <meta name="description" content="Miracle 2026 — a 24-hour flagship hackathon by Voice of Easwarians. 5 tracks, ₹50K+ prizes, Oct 15-16 at Easwari Engineering College.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <!-- Background Layers -->
+    <div class="global-bg"></div>
+    <div class="global-aurora">
+        <div class="aurora-blob aurora-blob-1"></div>
+        <div class="aurora-blob aurora-blob-2"></div>
+        <div class="aurora-blob aurora-blob-3"></div>
+    </div>
+    <div class="global-grid"></div>
+    <div class="global-noise"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <span>VOE</span>
+                <span class="nav-logo-sep">/</span>
+                <span class="text-gradient">Miracle '26</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html"              class="nav-link">Home</a>
+                <a href="pages/event-details.html" class="nav-link">Details</a>
+                <a href="pages/about.html"         class="nav-link">About</a>
+                <a href="pages/contact.html"       class="nav-link">Contact</a>
+                <a href="pages/registration.html"  class="btn btn-primary" style="padding:0.5rem 1.2rem;font-size:0.9rem;">Register Now</a>
+            </div>
+            <button class="nav-mobile-btn" id="mobileMenuBtn" aria-label="Open menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="mobile-nav-close" id="mobileClose"><i class="fas fa-times"></i></button>
+        <a href="index.html"               class="nav-link">Home</a>
+        <a href="pages/event-details.html" class="nav-link">Details</a>
+        <a href="pages/about.html"         class="nav-link">About</a>
+        <a href="pages/contact.html"       class="nav-link">Contact</a>
+        <a href="pages/registration.html"  class="btn btn-primary">Register Now</a>
+    </div>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero-section">
+            <canvas id="heroCanvas"></canvas>
+
+            <!-- Signature Visual Motif -->
+            <div class="hero-motif-container">
+                <div class="hero-motif-m">M</div>
+                <div class="hero-orbit hero-orbit-1"></div>
+                <div class="hero-orbit hero-orbit-2"></div>
+                <div class="hero-orbit hero-orbit-3"></div>
+                <div class="hero-spotlight"></div>
+            </div>
+
+            <div class="container hero-grid">
+                <div class="hero-content reveal fade-up">
+                    <div class="hero-badge">
+                        <span class="hero-badge-dot"></span>
+                        <span>Flagship Event &bull; Oct 15–16, 2026</span>
+                    </div>
+                    <h1 class="split-text">Code. Create.<br><span class="text-gradient">Collaborate.</span></h1>
+                    <p>Transform ideas into impact at Miracle 2026 — a 24-hour flagship hackathon by Voice of Easwarians for innovators, developers, and creators.</p>
+
+                    <div class="hero-stats">
+                        <div class="stat-card glass-panel">
+                            <span class="stat-val">24<span class="stat-unit">H</span></span>
+                            <span class="stat-label">Build Phase</span>
+                        </div>
+                        <div class="stat-card glass-panel">
+                            <span class="stat-val">2–4</span>
+                            <span class="stat-label">Per Team</span>
+                        </div>
+                        <div class="stat-card glass-panel">
+                            <span class="stat-val">5</span>
+                            <span class="stat-label">Tech Tracks</span>
+                        </div>
+                        <div class="stat-card glass-panel">
+                            <span class="stat-val">₹50K<span class="stat-unit">+</span></span>
+                            <span class="stat-label">In Prizes</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-ctas">
+                        <a href="pages/registration.html" class="btn btn-primary btn-hero">
+                            Register Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="pages/event-details.html" class="btn btn-secondary">
+                            Explore Details
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal fade-up delay-2">
+                    <div class="hero-countdown-card glass-panel">
+                        <div class="countdown-label">IGNITION SEQUENCE</div>
+                        <div class="countdown-timer">
+                            <div class="countdown-block">
+                                <span class="countdown-num" id="cd-days">--</span>
+                                <span class="countdown-unit">Days</span>
+                            </div>
+                            <span class="countdown-sep">:</span>
+                            <div class="countdown-block">
+                                <span class="countdown-num" id="cd-hours">--</span>
+                                <span class="countdown-unit">Hours</span>
+                            </div>
+                            <span class="countdown-sep">:</span>
+                            <div class="countdown-block">
+                                <span class="countdown-num" id="cd-mins">--</span>
+                                <span class="countdown-unit">Mins</span>
+                            </div>
+                        </div>
+                        <div class="countdown-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Easwari Eng. College</span>
+                            <span><i class="fas fa-calendar-alt"></i> Oct 15–16, 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PREVIEW CARDS -->
+        <section class="preview-section">
+            <div class="container preview-grid">
+                <a href="pages/event-details.html" class="glass-panel preview-card reveal fade-up">
+                    <div class="preview-icon-wrap"><i class="fas fa-layer-group"></i></div>
+                    <h3>5 Technical Tracks</h3>
+                    <p>From AI &amp; ML to Social Impact — explore the domains and build real-world solutions.</p>
+                    <span class="action-link">View Tracks <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="pages/event-details.html" class="glass-panel preview-card reveal fade-up delay-1">
+                    <div class="preview-icon-wrap" style="background:rgba(245,158,11,0.1);">
+                        <i class="fas fa-trophy" style="color:var(--gold);"></i>
+                    </div>
+                    <h3>₹50K+ Prize Pool</h3>
+                    <p>Cash prizes, exclusive swag, VIP internship interviews, and sponsored API credits.</p>
+                    <span class="action-link">View Prizes <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="pages/registration.html" class="glass-panel preview-card preview-card-cta reveal fade-up delay-2">
+                    <div class="preview-icon-wrap" style="background:rgba(240,79,122,0.12);">
+                        <i class="fas fa-rocket" style="color:var(--accent-secondary);"></i>
+                    </div>
+                    <h3>Registration Open</h3>
+                    <p>Secure your team's spot. Limited capacity for this 24-hour flagship event.</p>
+                    <span class="action-link" style="color:var(--accent-secondary);">Register Now <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="container" style="text-align:center;">
+                <div class="footer-logo">
+                    VOE<span class="nav-logo-sep">/</span><span class="text-gradient">Miracle</span>
+                </div>
+                <p class="footer-copy">&copy; 2026 Voice of Easwarians. Crafted by the VOE Tech Team.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Live Countdown
+        (function() {
+            const target = new Date('2026-10-15T09:00:00+05:30').getTime();
+            function tick() {
+                const diff = target - Date.now();
+                if (diff <= 0) {
+                    ['cd-days','cd-hours','cd-mins'].forEach(id => { const el = document.getElementById(id); if(el) el.textContent='00'; });
+                    return;
+                }
+                const d = Math.floor(diff / 86400000);
+                const h = Math.floor((diff % 86400000) / 3600000);
+                const m = Math.floor((diff % 3600000) / 60000);
+                const fmt = n => String(n).padStart(2,'0');
+                const set = (id, v) => { const el = document.getElementById(id); if(el) el.textContent = fmt(v); };
+                set('cd-days', d); set('cd-hours', h); set('cd-mins', m);
+            }
+            tick(); setInterval(tick, 30000);
+        })();
+    </script>
+</body>
+</html>

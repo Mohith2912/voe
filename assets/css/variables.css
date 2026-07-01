@@ -1,0 +1,61 @@
+/* =========================================
+   VARIABLES & DESIGN TOKENS
+   ========================================= */
+:root {
+    /* ---- Color Palette ---- */
+    --bg-base: #020208;
+    --bg-darker: #010105;
+    --bg-card: rgba(12, 12, 22, 0.5);
+    --bg-card-hover: rgba(20, 20, 38, 0.75);
+    --bg-panel: rgba(8, 8, 18, 0.7);
+
+    /* ---- Accent System ---- */
+    --accent-primary:   #5b52f0;   /* Deep indigo */
+    --accent-secondary: #f04f7a;   /* Rose         */
+    --accent-tertiary:  #a855f7;   /* Violet       */
+    --accent-cyan:      #06b6d4;   /* Cyan         */
+
+    /* ---- Prize Palette ---- */
+    --gold:        #f5a623;
+    --gold-light:  #fbbf24;
+    --silver:      #9ea8b8;
+    --bronze:      #b36b3c;
+
+    /* ---- Typography ---- */
+    --text-main:  #f1f5f9;
+    --text-muted: #8892a4;
+    --text-faint: rgba(255, 255, 255, 0.3);
+    --font-family: 'Outfit', sans-serif;
+
+    /* ---- Borders ---- */
+    --border-color:     rgba(255, 255, 255, 0.05);
+    --border-highlight: rgba(255, 255, 255, 0.10);
+    --border-glow:      rgba(91, 82, 240, 0.30);
+
+    /* ---- Status ---- */
+    --error-color:   #f43f5e;
+    --success-color: #10d98a;
+
+    /* ---- Gradients ---- */
+    --gradient-brand:     linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    --gradient-brand-alt: linear-gradient(135deg, var(--accent-tertiary), var(--accent-primary));
+    --gradient-card:      linear-gradient(145deg, rgba(20, 18, 40, 0.6) 0%, rgba(5, 5, 12, 0.4) 100%);
+
+    /* ---- Motion ---- */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out:   cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-cinematic: cubic-bezier(0.22, 1, 0.36, 1);
+    --transition-fast:   0.25s var(--ease-out-expo);
+    --transition-normal: 0.45s var(--ease-out-expo);
+    --transition-slow:   1.2s var(--ease-cinematic);
+
+    /* ---- Shadows ---- */
+    --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.6);
+    --shadow-glow: 0 0 30px rgba(91, 82, 240, 0.35);
+    --shadow-gold: 0 10px 40px rgba(245, 166, 35, 0.2);
+
+    /* ---- Layout ---- */
+    --nav-height:      70px;
+    --section-padding: 5rem;
+    --container-max:   1240px;
+}
