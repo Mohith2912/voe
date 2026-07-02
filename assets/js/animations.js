@@ -90,14 +90,8 @@ function initHeroParticles() {
         'rgba(6, 182, 212,',
     ];
 
-    const section = canvas.closest('section');
-    if (section) {
-        Object.assign(canvas.style, {
-            position: 'absolute', inset: '0',
-            width: '100%', height: '100%',
-            pointerEvents: 'none', zIndex: '0',
-        });
-    }
+    // Canvas is now styled globally in HTML, so we don't need to override its style here
+
 
     const resize = () => { canvas.width = canvas.offsetWidth; canvas.height = canvas.offsetHeight; };
     window.addEventListener('resize', resize, { passive: true });
@@ -118,7 +112,7 @@ function initHeroParticles() {
 
     const draw = () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        if (particles.length < 70 && Math.random() < 0.35) particles.push(spawn());
+        if (particles.length < 120 && Math.random() < 0.45) particles.push(spawn());
         particles = particles.filter(p => p.life < p.maxLife);
         particles.forEach(p => {
             p.life++; p.x += p.vx; p.y += p.vy;
